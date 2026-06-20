@@ -4,7 +4,7 @@ A agentic skill that reviews a pull request, a local branch/diff, or an explicit
 
 ## Why this exists
 
-Claude Code ships an official bundled `/code-review` skill that dispatches several parallel subagents (and can offload to a cloud multi-agent `ultra` mode, or a richer max-mode 10-angle taxonomy via one subagent per angle — see `docs/claude/code-review-claude.md`). This skill borrows from that design — one subagent per review lens — with two differences that matter for portability and report quality:
+Claude Code ships an official bundled `/code-review` skill that dispatches several parallel subagents (and can offload to a cloud multi-agent `ultra` mode, or a richer max-mode 10-angle taxonomy via one subagent per angle ). This skill borrows from that design — one subagent per review lens — with two differences that matter for portability and report quality:
 
 - **`--sequential` is always available**, dispatching one lens-subagent at a time instead of in parallel — useful for platforms that support subagent dispatch but not multiple agents running concurrently.
 - **Scoring stays centralized**, in one fresh-eyes pass over every lens's combined findings (Step 4) — never delegated to the lens-subagents themselves, so the same underlying issue flagged by two different lenses doesn't become two separate rows in the report.
