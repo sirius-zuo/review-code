@@ -1,6 +1,6 @@
 # review-code
 
-A Claude Code skill that reviews a pull request, a local branch/diff, or an explicit commit range or diff file for correctness bugs and `CLAUDE.md` compliance — by dispatching one subagent per review lens, either in parallel (default) or one at a time (`--sequential`). Dispatching one subagent at a time never requires multiple agents to run concurrently, so it still works against models (including local/offline LLMs) that can't run multiple agents in parallel — only true parallel dispatch needs that capability, and `--sequential` opts out of it.
+A agentic skill that reviews a pull request, a local branch/diff, or an explicit commit range or diff file for correctness bugs and `CLAUDE.md` compliance — by dispatching one subagent per review lens, either in parallel (default) or one at a time (`--sequential`). Dispatching one subagent at a time never requires multiple agents to run concurrently, so it still works against models (including local/offline LLMs) that can't run multiple agents in parallel — only true parallel dispatch needs that capability, and `--sequential` opts out of it.
 
 ## Why this exists
 
